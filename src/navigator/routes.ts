@@ -18,4 +18,9 @@ export default Object.freeze({
   NEW_CITY: "NewCity",
   SETTINGS: "Settings",
   USER_POST_TAB: "UserPostTab",
+  FAMILY: "Family",
+  DUES: "Dues",
+  INSURANCE: "Insurance",
+  INSURANCE_HOME: "InsuranceHome",
+  INSURANCE_DETAILS: "InsuranceDetails",
 } as { [key: string]: string; })

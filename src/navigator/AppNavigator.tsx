@@ -8,6 +8,7 @@ import ProfileNavigator from "./screenNavigators/ProfileNavigator";
 import Notifications from "../screens/Notifications";
 import styles from "../constants/styles";
 import AppIcons from "../components/AppIcons";
+import Family from './../screens/Family/index';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ export default function AppNavigator() {
     />
     <Tab.Screen 
       name={routes.USER_POST_TAB}
-      component={Home}
+      component={Family}
       options={{
         tabBarIcon: ({color, size}) => 
           <AppIcons Icon="MaterialIcons" name="family-restroom" size={size} color={color}/>

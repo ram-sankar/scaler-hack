@@ -2,6 +2,7 @@ import { Colors } from "./models/Common";
 
 const colors = {
   light: {
+    isDark: false,
     primary: "#fca311",
     lightPrimary: '#fcbf49',
     darkPrimary: '#f77f00',
@@ -21,9 +22,18 @@ const colors = {
     lightGreen2: '#ddffda',
     red: '#ff0054',
     transparent: '#00000000',
-    isDark: false
+    orange: '#e57a48',
+    lightOrange: '#fef6e9',
+    lightOrange2: '#ffd287',
+    green: '#48b08f',
+    lightBlue: '#eaedff',
+    lightBlue2: '#bdc6ff',
+    lightRed: '#ffeaea',
+    violet: '#a048b0',
+    lightViolet: '#f9eaff',
   },
   dark: {
+    isDark: true,
     primary: "#fca311",
     lightPrimary: '#fcbf49',
     darkPrimary: '#f77f00',
@@ -37,13 +47,21 @@ const colors = {
     gray3: "#5d6166",
     gray4: "#9e9e9e",
     gray5: "#9da3ab",
-    blue: "#7583ca",
+    blue: "#2a7ce6",
     appBackGround: '#212121',
     lightGreen: '#e1fce4',
     lightGreen2: '#ddffda',
     red: '#ff0054',
     transparent: '#00000000',
-    isDark: true
+    orange: '#e57a48',
+    lightOrange: '#fef6e9',
+    lightOrange2: '#ffd287',
+    green: '#48b08f',
+    lightBlue: '#eaedff',
+    lightBlue2: '#bdc6ff',
+    lightRed: '#ffeaea',
+    violet: '#a048b0',
+    lightViolet: '#f9eaff',
   }
 } as Colors;
 

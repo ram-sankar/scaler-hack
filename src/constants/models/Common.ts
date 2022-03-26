@@ -25,6 +25,15 @@ export interface Themes {
   red: ColorValue,
   transparent: ColorValue,
   isDark: boolean,
+  orange: ColorValue,
+  lightOrange: ColorValue,
+  lightOrange2: ColorValue,
+  green: ColorValue,
+  lightBlue: ColorValue,
+  lightBlue2: ColorValue,
+  lightRed: ColorValue,
+  violet: ColorValue,
+  lightViolet: ColorValue,
 }
 
 export interface Colors {
