@@ -17,11 +17,11 @@ function Family() {
   const navigation = React.useContext<any>(NavigationContext);
 
   const RenderItem = () => (
-    <FlatList 
+    <FlatList
       data={mocks.categories}
       renderItem={(category) => (
-        <View style={[styles.card, {backgroundColor: theme[category.item.bg]}]}>
-          <Pressable onPress={() => navigation.navigate(category.item.navigateTo, {name: category.item.name})}>
+        <View style={[styles.card, { backgroundColor: theme[category.item.bg] }]}>
+          <Pressable onPress={() => navigation.navigate(category.item.navigateTo, { name: category.item.name })}>
             <View style={styles.cardContent}>
               <AppIcons Icon={category.item.iconType} color={theme[category.item.color]} name={category.item.iconName} size={24} />
               <View style={styles.itemNameContainer}>
@@ -36,7 +36,7 @@ function Family() {
   )
 
   const Family = () => (
-    <View style={[styles.card, {backgroundColor: theme.lightBlue}]}>
+    <View style={[styles.card, { backgroundColor: theme.lightBlue }]}>
       <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.INSURANCE_HOME })}>
         <View style={styles.cardContent}>
           <AppIcons Icon='MaterialIcons' color={theme.blue} name="family-restroom" size={24} />
@@ -49,7 +49,7 @@ function Family() {
   )
 
   const BillDues = () => (
-    <View style={[styles.card, {backgroundColor: theme.lightViolet}]}>
+    <View style={[styles.card, { backgroundColor: theme.lightViolet }]}>
       <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.DUES })}>
         <View style={styles.cardContent}>
           <AppIcons Icon='Ionicons' color={theme.violet} name="document-text-outline" size={24} />
@@ -61,10 +61,23 @@ function Family() {
     </View>
   )
 
+  const AssetList = () => (
+    <View style={[styles.card, { backgroundColor: theme.lightOrange2 }]}>
+      <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.ASSET_TRACK })}>
+        <View style={styles.cardContent}>
+          <View>
+            <AppText style={styles.itemName}>Asset Tracker</AppText>
+          </View>
+        </View>
+      </Pressable>
+    </View>
+  )
+
   return (
     <AppScreen style={styles.container}>
       <Family />
-      <BillDues/>
+      <BillDues />
+      <AssetList />
       <RenderItem />
     </AppScreen>
   )
@@ -121,7 +134,7 @@ const useStyles = (theme: Themes) => StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    
+
   },
   cardImageContainer: {
     backgroundColor: theme.lightGreen,

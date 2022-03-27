@@ -196,6 +196,59 @@ const homeInvestmentMenu = [
   }
 ]
 
+const payMenu = [
+  {
+    name: "Family Transfer",
+    icon: "family-restroom",
+    family: "MaterialIcons"
+  },
+  {
+    name: "Recharge",
+    icon: "payment",
+    family: "MaterialIcons"
+  },
+  {
+    name: "EMI",
+    icon: "payments",
+    family: "MaterialIcons"
+  },
+  {
+    name: "Bill Pay",
+    icon: "money-check",
+    family: "FontAwesome5"
+  },
+  {
+    name: "Education",
+    icon: "school",
+    family: "Ionicons"
+  },
+  {
+    name: "Insurance",
+    icon: "ios-document-text-sharp",
+    family: "Ionicons"
+  },
+  {
+    name: "Medical",
+    icon: "stethoscope",
+    family: "MaterialCommunityIcons"
+  },
+  {
+    name: "Credit Card Bills",
+    icon: "credit-card",
+    family: "FontAwesome"
+  },
+  {
+    name: "Stock",
+    icon: "area-graph",
+    family: "Entypo"
+  },
+  {
+    name: "General",
+    icon: "add-circle",
+    family: "Ionicons"
+  }
+]
+
 
 export {
   profileDetails,
@@ -203,5 +256,6 @@ export {
   family,
   dues,
   insuranceDetails,
-  homeInvestmentMenu
+  homeInvestmentMenu,
+  payMenu
 }

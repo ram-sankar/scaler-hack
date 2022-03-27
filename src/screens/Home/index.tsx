@@ -101,6 +101,7 @@ function Explore({ navigation }: any) {
           </Pressable>
         </View>
       )}
+      keyExtractor={(item, index) => index.toString()}
       numColumns={3}
     />
   )

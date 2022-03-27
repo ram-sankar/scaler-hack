@@ -25,5 +25,6 @@ export default Object.freeze({
   INSURANCE_DETAILS: "InsuranceDetails",
   PAYMENT_TAB: "PaymentTab",
   PAYMENT_HOME: "PaymentHome",
-  AMOUNT: "Amount"
+  AMOUNT: "Amount",
+  ASSET_TRACK: "Asset"
 } as { [key: string]: string; })
