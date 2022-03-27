@@ -17,7 +17,7 @@ export default Object.freeze({
   NEW_POST: "NewPost",
   NEW_CITY: "NewCity",
   SETTINGS: "Settings",
-  USER_POST_TAB: "UserPostTab",
+  FAMILY_TAB: "FamilyTab",
   FAMILY: "Family",
   DUES: "Dues",
   INSURANCE: "Insurance",
