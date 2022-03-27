@@ -3,12 +3,12 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 
 import routes from "./routes";
 import Home from "./screenNavigators/HomeNavigator";
-import AddContentNavigator from "./screenNavigators/AddContentNavigator";
 import ProfileNavigator from "./screenNavigators/ProfileNavigator";
 import Notifications from "../screens/Notifications";
 import styles from "../constants/styles";
 import AppIcons from "../components/AppIcons";
 import FamilyNavigator from "./screenNavigators/FamilyNavigator";
+import PaymentNavigator from "./screenNavigators/PaymentNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -38,8 +38,8 @@ export default function AppNavigator() {
       }}  
     />
     <Tab.Screen 
-      name={routes.ADD_CONTENT_TAB}
-      component={AddContentNavigator}
+      name={routes.PAYMENT_TAB}
+      component={PaymentNavigator}
       options={{
         tabBarIcon: ({color, size}) => 
           <AppIcons Icon="AntDesign" name="pluscircle" size={size} color={color}/>
