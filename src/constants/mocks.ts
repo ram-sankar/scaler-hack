@@ -163,11 +163,45 @@ const insuranceDetails = [
   }
 ]
 
+const homeInvestmentMenu = [
+  {
+    name: "FD",
+    icon: "money",
+    family: "FontAwesome"
+  },
+  {
+    name: "Mutual Funds",
+    icon: "money-bill-wave",
+    family: "FontAwesome5"
+  },
+  {
+    name: "Crypto",
+    icon: "money-bill-alt",
+    family: "FontAwesome5"
+  },
+  {
+    name: "NPS",
+    icon: "money-check",
+    family: "FontAwesome5"
+  },
+  {
+    name: "EPF",
+    icon: "monero",
+    family: "FontAwesome5"
+  },
+  {
+    name: "Stocks",
+    icon: "attach-money",
+    family: "MaterialIcons"
+  }
+]
+
 
 export {
   profileDetails,
   categories,
   family,
   dues,
-  insuranceDetails
+  insuranceDetails,
+  homeInvestmentMenu
 }

@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import { ScrollView, StyleSheet, Pressable } from "react-native";
 import * as Yup from "yup";
 
@@ -19,52 +19,52 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(8).label("Password"),
 });
 
-function Login({navigation}: any) {
+function Login({ navigation }: any) {
   const { theme } = useContext(ThemeContext);
   const styles = useStyles(theme);
   const auth = useAuth();
   const [loginFailed, setLoginFailed] = useState(false);
 
-  const handleSubmit = async ({email, password}: LoginFormData) => {
+  const handleSubmit = async ({ email, password }: LoginFormData) => {
     const result = await authApi.login(email, password)
-    if(!result.ok) return setLoginFailed(true);
+    if (!result.ok) return setLoginFailed(true);
     setLoginFailed(false);
     auth.logIn(result?.headers?.["x-auth-token"] || '')
   }
 
   const LoginForm = () => (
-    <Form 
-        initialValues={{ email: "jonasK@dark.com", password: "martha_jonas" }}
-        onSubmit={handleSubmit}
-        validationSchema={validationSchema}
-      >
-        <ErrorMessage error="Invalid email and/or password." visible={loginFailed}/>
-        <FormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          keyboardType="email-address"
-          name="email"
-          placeholder="Email"
-          textContentType="emailAddress"
-        />
-        <FormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          name="password"
-          placeholder="Password"
-          secureTextEntry
-          textContentType="password"
-        />
-        <SubmitButton title="LOG IN" style={styles.loginButton} color={'text'}/>
-      </Form>
+    <Form
+      initialValues={{ email: "jonasK@dark.com", password: "martha_jonas" }}
+      onSubmit={handleSubmit}
+      validationSchema={validationSchema}
+    >
+      <ErrorMessage error="Invalid email and/or password." visible={loginFailed} />
+      <FormField
+        autoCapitalize="none"
+        autoCorrect={false}
+        keyboardType="email-address"
+        name="email"
+        placeholder="Email"
+        textContentType="emailAddress"
+      />
+      <FormField
+        autoCapitalize="none"
+        autoCorrect={false}
+        name="password"
+        placeholder="Password"
+        secureTextEntry
+        textContentType="password"
+      />
+      <SubmitButton title="LOG IN" style={styles.loginButton} color={'text'} />
+    </Form>
   )
 
   return (
     <AppScreen style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <BackButton/>
+        <BackButton />
         <AppText style={styles.headingText}>Welcome Back!</AppText>
-        <LoginForm/>
+        <LoginForm />
         <AppText style={styles.forgotPassword}>Forgot your password?</AppText>
         <Pressable onPress={() => navigation.navigate(routes.REGISTER)}>
           <AppText style={[styles.forgotPassword, styles.signUpContainer]}>
