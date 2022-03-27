@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Button, FlatList, Pressable, StyleSheet, View } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import { FlatList, Pressable, StyleSheet, View } from "react-native";
 
 import AppScreen from "../../components/AppScreen";
 import ThemeContext from "../../common/ThemeContext";
@@ -12,6 +12,7 @@ import { mocks } from "../../constants";
 import {
   LineChart
 } from "react-native-chart-kit";
+import personal from "../../api/personal";
 
 const data = {
   labels: ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar"],
@@ -31,9 +32,18 @@ const data = {
 };
 
 function Explore({ navigation }: any) {
-
+  const [personalWorth, setPersonalWorth] = useState<any>(null)
   const { theme } = useContext(ThemeContext);
   const styles = useStyles(theme);
+
+  useEffect(() => {
+    getNetWorth()
+  },[])
+  
+  const getNetWorth = async () => {
+    const res: any = await personal.getNetWorth()
+    setPersonalWorth(res?.data?.data)
+  }
 
   const Family = () => (
     <View style={[styles.card, { backgroundColor: theme.lightBlue }]}>

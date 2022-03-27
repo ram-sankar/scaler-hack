@@ -42,7 +42,7 @@ export default function AppNavigator() {
       component={PaymentNavigator}
       options={{
         tabBarIcon: ({color, size}) => 
-          <AppIcons Icon="AntDesign" name="pluscircle" size={size} color={color}/>
+          <AppIcons Icon="MaterialIcons" name="attach-money" size={size} color={color}/>
       }}  
     />
     <Tab.Screen 
@@ -50,7 +50,7 @@ export default function AppNavigator() {
       component={Notifications}
       options={{
         tabBarIcon: ({color, size}) => 
-          <AppIcons Icon="Ionicons" name="notifications" size={size} color={color}/>
+          <AppIcons Icon="Foundation" name="mountains" size={size} color={color}/>
       }}  
     />
     <Tab.Screen 

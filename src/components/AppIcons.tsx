@@ -1,5 +1,5 @@
 import React from "react";
-import { AntDesign, Ionicons, FontAwesome5, Feather, MaterialCommunityIcons, FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import { AntDesign, Ionicons, FontAwesome5, Feather, MaterialCommunityIcons, FontAwesome, MaterialIcons, Foundation } from "@expo/vector-icons";
 
 function AppIcons({Icon, forwardedRef, ...props}: Props) {
   switch (Icon) {
@@ -17,6 +17,8 @@ function AppIcons({Icon, forwardedRef, ...props}: Props) {
       return <MaterialIcons ref={forwardedRef} {...props}/>
     case 'AntDesign':
       return <AntDesign ref={forwardedRef} {...props}/>
+    case 'Foundation':
+      return <Foundation ref={forwardedRef} {...props}/>
     default:
       console.log(`${Icon} not found`)
       return null;
