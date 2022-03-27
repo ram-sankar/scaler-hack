@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
 import AppScreen from "../../components/AppScreen";
-import { mocks } from "../../constants";
 import AppText from "../../components/AppText";
 import { sizes } from "../../constants/theme";
 import AppIcons from "../../components/AppIcons";
@@ -26,27 +25,66 @@ function Asset({ navigation }: any) {
         }
     }
 
-    const AssetList = () => (
-        <FlatList
-            data={mocks.dues}
-            renderItem={(due) => (
-                <View style={styles.card}>
-                    <View style={styles.cardContent}>
-                        <View style={styles.cardIconContainer}>
-                            <Icon type={due.item.type} />
-                        </View>
-                        <View style={styles.itemNameContainer}>
-                            <AppText style={styles.itemName}>{due.item.name}</AppText>
-                            <AppText style={[styles.daysLeft, { color: due.item.daysLeft < 10 ? theme.tomato : theme.gray10 }]}>{due.item.daysLeft} Days Left</AppText>
-                        </View>
-                        <View style={styles.amountContainer}>
-                            <AppText style={styles.amount}>&#8377;{due.item.amount}</AppText>
-                            <AppText style={styles.amountNote}>Bill Amount</AppText>
-                        </View>
-                    </View>
+    const AssetListHome = () => (
+        <View style={styles.card}>
+            <View style={styles.cardContent}>
+                <View style={styles.itemNameContainer}>
+                    <AppText style={styles.itemName}>Own House - Chennai</AppText>
+                    <AppText style={styles.itemLocation}>Location: 1st Block, Mahatma Gandhi Road, Taramani, Chennai-600 152</AppText>
+                    <AppText style={styles.valIncrease}>Purchased: May-2019</AppText>
+                    <AppText style={[styles.linkData, { marginTop: 10 }]}>Download Document</AppText>
+                    <AppText style={styles.linkData}>More Info</AppText>
                 </View>
-            )}
-        />
+                <View style={styles.amountContainer}>
+                    <AppText style={styles.amount}>&#8377;50 Lakhs</AppText>
+                    <AppText style={styles.amountNote}>Puchase Value</AppText>
+                    <AppText style={styles.amountSecond}>&#8377;60 Lakhs</AppText>
+                    <AppText style={styles.amountNote}>Current Value Value</AppText>
+                </View>
+
+            </View>
+        </View>
+    )
+
+    const AssetListGold = () => (
+        <View style={styles.card}>
+            <View style={styles.cardContent}>
+                <View style={styles.itemNameContainer}>
+                    <AppText style={styles.itemName}>Land Property - Madurai</AppText>
+                    <AppText style={styles.itemLocation}>Location: 1st Main Road, TVK Salai, Madurai - 603 142</AppText>
+                    <AppText style={styles.valIncrease}>Purchased: May-2018</AppText>
+                    <AppText style={[styles.linkData, { marginTop: 10 }]}>Download Document</AppText>
+                    <AppText style={styles.linkData}>More Info</AppText>
+                </View>
+                <View style={styles.amountContainer}>
+                    <AppText style={styles.amount}>&#8377;25 Lakhs</AppText>
+                    <AppText style={styles.amountNote}>Puchase Value</AppText>
+                    <AppText style={styles.amountSecond}>&#8377;26.3 Lakhs</AppText>
+                    <AppText style={styles.amountNote}>Current Value Value</AppText>
+                </View>
+
+            </View>
+        </View>
+    )
+
+    const AssetListLand = () => (
+        <View style={styles.card}>
+            <View style={styles.cardContent}>
+                <View style={styles.itemNameContainer}>
+                    <AppText style={styles.itemName}>Gold Ornaments</AppText>
+                    <AppText style={styles.itemLocation}>24 Ct Gold Jewellery</AppText>
+                    <AppText style={[styles.linkData, { marginTop: 10 }]}>Download Document</AppText>
+                    <AppText style={styles.linkData}>More Info</AppText>
+                </View>
+                <View style={styles.amountContainer}>
+                    <AppText style={styles.amount}>75 Poun</AppText>
+                    <AppText style={styles.amountNote}>Total Weight</AppText>
+                    <AppText style={styles.amountSecond}>&#8377;38,624</AppText>
+                    <AppText style={styles.amountNote}>Current Rate/Poun</AppText>
+                </View>
+
+            </View>
+        </View>
     )
 
     return (
@@ -54,7 +92,9 @@ function Asset({ navigation }: any) {
             <View style={styles.topHeadingContainer}>
                 <AppText style={[styles.heading]}>Asset Tracker</AppText>
             </View>
-            <AssetList />
+            <AssetListHome />
+            <AssetListGold />
+            <AssetListLand />
         </AppScreen>
     )
 }
@@ -70,7 +110,11 @@ const useStyles = (theme: Themes) => StyleSheet.create({
         flex: 1,
         fontWeight: '700',
         fontSize: 20,
-        marginBottom: 20
+        marginBottom: 20,
+        marginTop: 15,
+        textAlign: 'center',
+        justifyContent: 'center',
+        width: '100%'
     },
     line: {
         flexDirection: 'row',
@@ -131,6 +175,33 @@ const useStyles = (theme: Themes) => StyleSheet.create({
     amountNote: {
         color: theme.gray,
         fontSize: 13
+    },
+    itemLocation: {
+        marginRight: 10
+    },
+    amountSecond: {
+        fontWeight: '700',
+        color: theme.green,
+        marginTop: 15,
+        fontSize: 17,
+    },
+    valIncrease: {
+        fontWeight: '700',
+        color: theme.green,
+        marginTop: 15,
+        fontSize: 15,
+    },
+    linkData: {
+        color: theme.blue,
+        fontSize: 12,
+        marginTop: 3,
+        textDecorationLine: 'underline'
+    },
+    valModerate: {
+        fontWeight: '700',
+        color: theme.orange,
+        marginTop: 15,
+        fontSize: 15,
     },
 });
 
