@@ -7,11 +7,14 @@ import { Themes } from "../../constants/models/Common";
 import AppText from '../../components/AppText';
 import AppIcons from './../../components/AppIcons';
 import { mocks } from "../../constants";
+import routes from "../../navigator/routes";
+import { NavigationContext } from '@react-navigation/native';
 
 
-function Family({navigation}: any) {
+function Family() {
   const { theme }: any = useContext(ThemeContext);
   const styles = useStyles(theme);
+  const navigation = React.useContext<any>(NavigationContext);
 
   const RenderItem = () => (
     <FlatList 
@@ -34,7 +37,7 @@ function Family({navigation}: any) {
 
   const Family = () => (
     <View style={[styles.card, {backgroundColor: theme.lightBlue}]}>
-      <Pressable onPress={() => navigation.navigate("Family")}>
+      <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.INSURANCE_HOME })}>
         <View style={styles.cardContent}>
           <AppIcons Icon='MaterialIcons' color={theme.blue} name="family-restroom" size={24} />
           <View style={styles.itemNameContainer}>
@@ -47,7 +50,7 @@ function Family({navigation}: any) {
 
   const BillDues = () => (
     <View style={[styles.card, {backgroundColor: theme.lightViolet}]}>
-      <Pressable onPress={() => navigation.navigate("Dues")}>
+      <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.DUES })}>
         <View style={styles.cardContent}>
           <AppIcons Icon='Ionicons' color={theme.violet} name="document-text-outline" size={24} />
           <View style={styles.itemNameContainer}>
