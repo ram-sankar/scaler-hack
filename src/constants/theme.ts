@@ -31,6 +31,8 @@ const colors = {
     lightRed: '#ffeaea',
     violet: '#a048b0',
     lightViolet: '#f9eaff',
+    lightViolet2: '#f3d4ff',
+    tomato: '#ed4e4e',
   },
   dark: {
     isDark: true,
@@ -62,6 +64,8 @@ const colors = {
     lightRed: '#ffeaea',
     violet: '#a048b0',
     lightViolet: '#f9eaff',
+    lightViolet2: '#edbfff',
+    tomato: '#ed4e4e',
   }
 } as Colors;
 

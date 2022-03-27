@@ -9,7 +9,7 @@ function Notifications() {
   return (
     <AppScreen style={styles.container}>
       <View style={styles.noNotifications}>
-        <AppText style={styles.noNotificationsText}>No New Notifications</AppText>
+        <AppText style={styles.noNotificationsText}>No Goals are set</AppText>
         <Image source={require("../../assets/images/noNotifications.png")} style={styles.image}/>
       </View>
     </AppScreen>

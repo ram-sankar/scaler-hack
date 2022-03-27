@@ -167,85 +167,101 @@ const homeInvestmentMenu = [
   {
     name: "FD",
     icon: "money",
-    family: "FontAwesome"
+    family: "FontAwesome",
+    amount: "50,000"
   },
   {
     name: "Mutual Funds",
     icon: "money-bill-wave",
-    family: "FontAwesome5"
+    family: "FontAwesome5",
+    amount: "35,000"
   },
   {
     name: "Crypto",
     icon: "money-bill-alt",
-    family: "FontAwesome5"
+    family: "FontAwesome5",
+    amount: "25,000"
   },
   {
     name: "NPS",
     icon: "money-check",
-    family: "FontAwesome5"
+    family: "FontAwesome5",
+    amount: "20,000"
   },
   {
     name: "EPF",
     icon: "monero",
-    family: "FontAwesome5"
+    family: "FontAwesome5",
+    amount: "70,000"
   },
   {
     name: "Stocks",
     icon: "attach-money",
-    family: "MaterialIcons"
+    family: "MaterialIcons",
+    amount: "65,000"
   }
 ]
 
 const payMenu = [
   {
-    name: "Family Transfer",
-    icon: "family-restroom",
-    family: "MaterialIcons"
+    name: "General",
+    icon: "shopping-cart",
+    family: "Entypo",
+    amountLeft: 1350
   },
   {
-    name: "Recharge",
-    icon: "payment",
-    family: "MaterialIcons"
+    name: "Shopping",
+    icon: "shopping-bag",
+    family: "Entypo",
+    amountLeft: 450
+  },
+  {
+    name: "Travel",
+    icon: "flight",
+    family: "MaterialIcons",
+    amountLeft: 900
+  },
+  {
+    name: "Entertainment",
+    icon: "movie",
+    family: "MaterialIcons",
+    amountLeft: -200
+  },
+  {
+    name: "Bills",
+    icon: "text-document-inverted",
+    family: "Entypo",
+    amountLeft: 600
+  },
+  {
+    name: "Groceries",
+    icon: "food-apple",
+    family: "MaterialCommunityIcons",
+    amountLeft: 200
+  },
+  {
+    name: "Petrol",
+    icon: "fuel",
+    family: "MaterialCommunityIcons",
+    amountLeft: 100
+  },
+  {
+    name: "Commute",
+    icon: "car-side",
+    family: "FontAwesome5",
+    amountLeft: 800
   },
   {
     name: "EMI",
-    icon: "payments",
-    family: "MaterialIcons"
-  },
-  {
-    name: "Bill Pay",
-    icon: "money-check",
-    family: "FontAwesome5"
-  },
-  {
-    name: "Education",
-    icon: "school",
-    family: "Ionicons"
-  },
-  {
-    name: "Insurance",
-    icon: "ios-document-text-sharp",
-    family: "Ionicons"
+    icon: "text-document-inverted",
+    family: "Entypo",
+    amountLeft: 0
   },
   {
     name: "Medical",
-    icon: "stethoscope",
-    family: "MaterialCommunityIcons"
-  },
-  {
-    name: "Credit Card Bills",
-    icon: "credit-card",
-    family: "FontAwesome"
-  },
-  {
-    name: "Stock",
-    icon: "area-graph",
-    family: "Entypo"
-  },
-  {
-    name: "General",
-    icon: "add-circle",
-    family: "Ionicons"
+    icon: "pills",
+    family: "Fontisto",
+    amountLeft: 1500
   }
 ]
 

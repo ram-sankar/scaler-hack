@@ -10,6 +10,7 @@ import InsuranceHome from '../../screens/Family/InsuranceHome';
 import Dues from '../../screens/Family/Dues';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import Asset from '../../screens/Family/Asset';
+import Members from '../../screens/Family/Members';
 
 const FamilyStack = createNativeStackNavigator();
 
@@ -34,7 +35,7 @@ export default function FamilyNavigator({ navigation, route }: Props) {
       <FamilyStack.Screen name={routes.INSURANCE_HOME} component={InsuranceHome} />
       <FamilyStack.Screen name={routes.DUES} component={Dues} />
       <FamilyStack.Screen name={routes.ASSET_TRACK} component={Asset} />
-
+      <FamilyStack.Screen name={routes.MEMBERS} component={Members} />
     </FamilyStack.Navigator>
   );
 }

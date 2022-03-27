@@ -30,6 +30,7 @@ function PaymentHome() {
             <View style={styles.cardContent}>
               <View style={styles.itemNameContainer}>
                 <AppText style={styles.itemName}>{category.item.name}</AppText>
+                <AppText style={[styles.itemAmountLeft, {color: category.item.amountLeft < 500 ? theme.tomato : theme.darkGrey}]}>{category.item.amountLeft}</AppText>
               </View>
             </View>
           </Pressable>
@@ -76,6 +77,12 @@ const useStyles = (theme: Themes) => StyleSheet.create({
     marginTop: 10,
     textAlign: 'center',
     color: theme.darkGrey
+  },
+  itemAmountLeft: {
+    fontSize: 13,
+    fontWeight: '700',
+    textAlign: 'center',
+    color: theme.tomato
   },
   itemNameContainer: {
     width: 100,

@@ -26,5 +26,6 @@ export default Object.freeze({
   PAYMENT_TAB: "PaymentTab",
   PAYMENT_HOME: "PaymentHome",
   AMOUNT: "Amount",
-  ASSET_TRACK: "Asset"
+  ASSET_TRACK: "Asset",
+  MEMBERS: "Members"
 } as { [key: string]: string; })

@@ -37,7 +37,7 @@ function Dues({navigation}: any) {
             </View>
             <View style={styles.itemNameContainer}>
               <AppText style={styles.itemName}>{due.item.name}</AppText>
-              <AppText style={[styles.daysLeft, {color: due.item.daysLeft < 10 ? theme.tomato : theme.gray10}]}>{due.item.daysLeft} Days Left</AppText>
+              <AppText style={[styles.daysLeft, {color: due.item.daysLeft < 10 ? theme.tomato : theme.gray}]}>{due.item.daysLeft} Days Left</AppText>
             </View>
             <View style={styles.amountContainer}>
               <AppText style={styles.amount}>&#8377;{due.item.amount}</AppText>

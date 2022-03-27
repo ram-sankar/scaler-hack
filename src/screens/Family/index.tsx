@@ -37,7 +37,7 @@ function Family() {
 
   const Family = () => (
     <View style={[styles.card, { backgroundColor: theme.lightBlue }]}>
-      <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.INSURANCE_HOME })}>
+      <Pressable onPress={() => navigation.navigate(routes.FAMILY_TAB, { screen: routes.MEMBERS })}>
         <View style={styles.cardContent}>
           <AppIcons Icon='MaterialIcons' color={theme.blue} name="family-restroom" size={24} />
           <View style={styles.itemNameContainer}>

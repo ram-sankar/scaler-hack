@@ -34,6 +34,8 @@ export interface Themes {
   lightRed: ColorValue,
   violet: ColorValue,
   lightViolet: ColorValue,
+  lightViolet2: ColorValue,
+  tomato: ColorValue,
 }
 
 export interface Colors {
